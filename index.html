@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <script>
+        
+         document.addEventListener("DOMContentLoaded",function(){
+        document.querySelector("form").onsubmit=function() {
+            let weight =document.querySelector("#weight").value;
+            let height =document.querySelector("#height").value;
+            let ss=weight/((height/100)*(height/100));
+             if (ss<18.5){
+                document.querySelector("h1").innerHTML="BMI= "+ss.toFixed(2);
+                document.querySelector("h2").innerHTML="UnderWeight";
+            {
+               
+                return false;
+            }}
+            else if(ss<24.9)
+            {
+                document.querySelector("h1").innerHTML="BMI= "+ss.toFixed(2);
+                document.querySelector("h2").innerHTML="NormalWeight";
+            {
+               
+                return false;
+            }}
+            else if(ss<29.9)
+            {
+                document.querySelector("h1").innerHTML="BMI= "+ss.toFixed(2);
+                document.querySelector("h2").innerHTML="OverWeight";
+            {
+                
+                return false;
+            }}
+            else if(ss<34.9)
+            {
+                document.querySelector("h1").innerHTML="BMI= "+ss.toFixed(2);
+                document.querySelector("h2").innerHTML="OverWeight class2";
+            {
+               
+                return false;
+            }}
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="text " placeholder="Enter Your weight KG" id="weight" >
+        <input type="text " placeholder="Enter Your height CM" id="height" >
+        <input type="submit">
+        <h1 id="h1"></h1>
+        <h2 id="h2"></h2>
+    </form>
+    
+</body>
+</html>
